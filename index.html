@@ -637,8 +637,11 @@ body {
 .pr-method-btn{padding:11px;border:1px solid var(--pr-border);border-radius:10px;background:var(--pr-surface-2);color:var(--pr-text-2);font:600 12px inherit;cursor:pointer}
 .pr-method-btn.is-active{border-color:var(--pr-primary);background:var(--pr-primary-soft);color:var(--pr-primary)}
 .pr-withdraw-form{display:none}.pr-withdraw-form.is-active{display:block}
-@media(max-width:560px){.pr-topbar{flex-wrap:wrap}.pr-topbar-left{flex:1 1 100%}.pr-topbar>.pr-wallet-btn{margin-left:auto}}
-
+/* MOBILE UPI / AMOUNT PRESENTATION */
+.pr-upi-amount-front{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding:15px 16px;border:1px solid var(--pr-border);border-radius:14px;background:var(--pr-primary-soft);color:var(--pr-text)}
+.pr-upi-amount-front span{font-size:12px;color:var(--pr-text-2);font-weight:600}
+.pr-upi-amount-front strong{font-size:25px;line-height:1;font-weight:850;letter-spacing:-.5px}
+@media(max-width:560px){.pr-wallet-modal{max-width:none;width:100%;max-height:calc(100dvh - 20px);border-radius:18px}.pr-modal-backdrop{padding:10px}.pr-modal-body{padding:16px}.pr-modal-foot{padding:12px 16px calc(14px + env(safe-area-inset-bottom))}.pr-upi-amount-front{padding:16px}.pr-upi-amount-front strong{font-size:29px}}
 
 /* TIME SLOT BOOKING */
 .pr-booking-link{width:100%;display:flex;align-items:center;gap:12px;margin:2px 0 18px;padding:14px 16px;border:1px solid var(--pr-border);border-radius:14px;background:var(--pr-surface);color:var(--pr-text);text-align:left;cursor:pointer;box-shadow:var(--pr-shadow-sm);transition:.18s}
@@ -1668,15 +1671,61 @@ body {
     }
     var balance=getWalletBalance();
     var body=$('#prWalletBody'),foot=$('#prWalletFoot');
-    body.innerHTML='<div class="pr-wallet-balance-card"><span>Withdrawable balance</span><strong>₹'+balance.toFixed(2)+'</strong><small>Final payout will be processed by your connected payment system.</small></div>'+
+    body.innerHTML='<div class="pr-upi-amount-front"><span>Amount to withdraw</span><strong>₹'+balance.toFixed(2)+'</strong></div>'+
       '<div class="pr-withdraw-methods"><button class="pr-method-btn '+(withdrawalMethod==='upi'?'is-active':'')+'" id="prMethodUpi">UPI ID</button><button class="pr-method-btn '+(withdrawalMethod==='bank'?'is-active':'')+'" id="prMethodBank">Bank Account</button></div>'+
-      '<div class="pr-withdraw-form '+(withdrawalMethod==='upi'?'is-active':'')+'" id="prUpiWithdrawForm"><div class="pr-field"><label>UPI ID</label><input class="pr-input" id="prWithdrawUpi" placeholder="example@upi"></div></div>'+
-      '<div class="pr-withdraw-form '+(withdrawalMethod==='bank'?'is-active':'')+'" id="prBankWithdrawForm"><div class="pr-field"><label>Account Holder Name</label><input class="pr-input" id="prBankName" placeholder="Name"></div><div class="pr-field"><label>Account Number</label><input class="pr-input" id="prBankAccount" inputmode="numeric" placeholder="Account number"></div><div class="pr-field"><label>IFSC Code</label><input class="pr-input" id="prBankIfsc" autocapitalize="characters" placeholder="IFSC"></div></div>'+
-      '<div class="pr-alert pr-alert-info" style="margin-top:8px"><span>यह UI payment-system integration के लिए तैयार है। Actual payout backend से secure तरीके से करना होगा।</span></div>';
+      '<div class="pr-withdraw-form '+(withdrawalMethod==='upi'?'is-active':'')+'" id="prUpiWithdrawForm"><div class="pr-field"><label>UPI ID</label><input class="pr-input" id="prWithdrawUpi" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="example@upi"></div></div>'+
+      '<div class="pr-withdraw-form '+(withdrawalMethod==='bank'?'is-active':'')+'" id="prBankWithdrawForm"><div class="pr-field"><label>Account Holder Name</label><input class="pr-input" id="prBankName" autocomplete="name" placeholder="Name"></div><div class="pr-field"><label>Account Number</label><input class="pr-input" id="prBankAccount" type="password" inputmode="numeric" autocomplete="off" placeholder="Account number" maxlength="30"></div><div class="pr-field"><label>Confirm Account Number</label><input class="pr-input" id="prBankAccountConfirm" type="text" inputmode="numeric" autocomplete="off" placeholder="Enter account number again" maxlength="30"><p class="pr-error" id="prBankAccountMatchError" role="alert"></p></div><div class="pr-field"><label>IFSC Code</label><input class="pr-input" id="prBankIfsc" autocapitalize="characters" autocomplete="off" placeholder="IFSC"></div></div>'+
+      '<div class="pr-alert pr-alert-info" style="margin-top:8px"><span>UPI ID पर payment करने के लिए UPI app में यही ₹'+balance.toFixed(2)+' amount भेजने के लिए खोला जाएगा. Actual wallet payout के लिए secure payment backend आवश्यक है.</span></div>';
     foot.innerHTML='<button class="pr-btn pr-btn-secondary" id="prWithdrawBack">Back</button><button class="pr-btn pr-btn-primary" id="prSubmitWithdrawal">Request Withdrawal</button>';
     $('#prMethodUpi').addEventListener('click',function(){withdrawalMethod='upi';openWithdrawal();});
     $('#prMethodBank').addEventListener('click',function(){withdrawalMethod='bank';openWithdrawal();});
     $('#prWithdrawBack').addEventListener('click',renderWallet);
+
+    /* Bank account confirmation: original account number stays masked;
+       confirmation is visible so the user can verify what was entered. */
+    var bankAccount = $('#prBankAccount');
+    var bankAccountConfirm = $('#prBankAccountConfirm');
+    var bankMatchError = $('#prBankAccountMatchError');
+    var withdrawalSubmit = $('#prSubmitWithdrawal');
+    function validateBankAccountMatch(showError) {
+      if (!bankAccount || !bankAccountConfirm || !withdrawalSubmit) return false;
+      var a = bankAccount.value.replace(/\D/g, '');
+      var b = bankAccountConfirm.value.replace(/\D/g, '');
+      var valid = a.length > 0 && b.length > 0 && a === b;
+      if (withdrawalMethod === 'bank') {
+        withdrawalSubmit.disabled = !valid;
+        withdrawalSubmit.setAttribute('aria-disabled', valid ? 'false' : 'true');
+      }
+      if (bankMatchError) {
+        if (showError && b.length > 0 && a !== b) {
+          bankMatchError.textContent = 'Account numbers do not match.';
+          bankMatchError.classList.add('is-visible');
+        } else if (valid) {
+          bankMatchError.textContent = 'Account numbers match.';
+          bankMatchError.classList.add('is-visible');
+          bankMatchError.classList.remove('pr-error');
+          bankMatchError.style.color = 'var(--pr-success, #16803c)';
+        } else {
+          bankMatchError.textContent = '';
+          bankMatchError.classList.remove('is-visible');
+          bankMatchError.classList.add('pr-error');
+          bankMatchError.style.color = '';
+        }
+      }
+      return valid;
+    }
+    if (bankAccount && bankAccountConfirm) {
+      bankAccount.addEventListener('input', function(){
+        this.value = this.value.replace(/\D/g, '');
+        validateBankAccountMatch(false);
+      });
+      bankAccountConfirm.addEventListener('input', function(){
+        this.value = this.value.replace(/\D/g, '');
+        validateBankAccountMatch(false);
+      });
+      bankAccountConfirm.addEventListener('blur', function(){ validateBankAccountMatch(true); });
+    }
+
     $('#prSubmitWithdrawal').addEventListener('click',submitWithdrawal);
   }
   function submitWithdrawal(){
@@ -1684,10 +1733,34 @@ body {
     if(amount<=0){toast('Wallet balance available नहीं है','warning');return;}
     var data={customerUid:currentUser&&currentUser.uid,method:withdrawalMethod,amount:amount,createdAt:new Date().toISOString()};
     if(withdrawalMethod==='upi'){data.upiId=sanitizeUpiId($('#prWithdrawUpi').value);if(!isValidUpiId(data.upiId)){toast('Valid UPI ID डालें','warning');return;}}
-    else {data.accountName=sanitizeText($('#prBankName').value,80);data.accountNumber=sanitizeText($('#prBankAccount').value,30);data.ifsc=sanitizeText($('#prBankIfsc').value,20).toUpperCase();if(!data.accountName||!data.accountNumber||!data.ifsc){toast('Bank details पूरी भरें','warning');return;}}
-    /* Do not deduct money here. Send this object to your secure payout API/backend later. */
+    else {
+      data.accountName=sanitizeText($('#prBankName').value,80);
+      data.accountNumber=sanitizeText($('#prBankAccount').value,30).replace(/\D/g,'');
+      data.confirmAccountNumber=sanitizeText($('#prBankAccountConfirm').value,30).replace(/\D/g,'');
+      data.ifsc=sanitizeText($('#prBankIfsc').value,20).toUpperCase();
+      if(!data.accountName||!data.accountNumber||!data.confirmAccountNumber||!data.ifsc){toast('Bank details पूरी भरें','warning');return;}
+      if(data.accountNumber!==data.confirmAccountNumber){
+        var ce=$('#prBankAccountMatchError');
+        if(ce){ce.textContent='Account numbers do not match.';ce.classList.add('is-visible');}
+        toast('Confirm account number सही नहीं है','warning');
+        return;
+      }
+    }
+    /* A web page cannot debit its own wallet balance. For UPI, open the
+       installed UPI app with the exact amount and entered UPI ID; the payer
+       must still authorize the transaction there. */
     console.log('WITHDRAWAL_REQUEST_READY',data);
-    toast('Withdrawal request तैयार है — payment backend जोड़ने के बाद payout होगा','success');
+    if(withdrawalMethod==='upi'){
+      openUpiApp({
+        upiId:data.upiId,
+        receiverName:'Wallet Withdrawal',
+        amount:amount,
+        currency:'INR',
+        note:'Wallet withdrawal'
+      });
+      return;
+    }
+    toast('Bank withdrawal request तैयार है — actual payout के लिए secure backend जोड़ना होगा','success');
   }
 
   /* ---- HISTORY ---- */
@@ -2352,17 +2425,48 @@ body {
   }
 
   /* ---- OPEN UPI APP ---- */
+  /* Android UPI launcher: keep the exact payee + fixed INR amount and avoid
+     the hidden-anchor flow that can route incorrectly on some Android browsers. */
+  function buildAndroidUpiIntent(uri) {
+    var clean = String(uri || '').replace(/^upi:\/\//i, '');
+    return 'intent://' + clean +
+      '#Intent;scheme=upi;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end';
+  }
+
   function openUpiApp(parsed) {
-    var uri = parsed.uri;
-    if (!/^upi:\/\//i.test(uri)) { toast('Invalid UPI payment link', 'error'); return; }
-    state.payPending = { uri: uri, startedAt: Date.now(), data: parsed };
-    toast('UPI app खोला जा रहा है…', 'info');
+    var uri = parsed && parsed.uri;
+    if (!/^upi:\/\//i.test(uri || '')) { toast('Invalid UPI payment link', 'error'); return; }
+
+    /* Rebuild from parsed data so the UPI app receives the same amount shown here. */
+    var exactUri = buildUpiUri({
+      upiId: parsed.upiId,
+      receiverName: parsed.receiverName || 'Receiver',
+      amount: parsed.amount,
+      note: parsed.note || ''
+    });
+
+    state.payPending = {
+      uri: exactUri,
+      startedAt: Date.now(),
+      data: {
+        upiId: parsed.upiId,
+        receiverName: parsed.receiverName || 'Receiver',
+        amount: parsed.amount,
+        currency: 'INR',
+        note: parsed.note || '',
+        uri: exactUri
+      }
+    };
+
+    toast(parsed.amount != null ? 'UPI payment: ₹' + formatAmount(parsed.amount) : 'UPI payment app खोला जा रहा है…', 'info');
+
     try {
-      var a = document.createElement('a');
-      a.href = uri; a.style.display = 'none';
-      document.body.appendChild(a); a.click();
-      setTimeout(function () { if (a.parentNode) a.parentNode.removeChild(a); }, 800);
-    } catch (e) { window.location.href = uri; }
+      /* Direct navigation from the user's tap is more reliable on Android. */
+      window.location.href = buildAndroidUpiIntent(exactUri);
+    } catch (e) {
+      try { window.location.href = exactUri; }
+      catch (e2) { toast('UPI app नहीं खुल सका। UPI app installed है या नहीं जांचें.', 'error'); }
+    }
   }
 
   function onVisibilityReturn() {
@@ -2372,7 +2476,17 @@ body {
     if (elapsed < 1500) return;
     var pending = state.payPending;
     state.payPending = null;
-    showPaymentStatusModal(pending);
+
+    /* No second popup on return. Keep the exact amount visible inline. */
+    var result = $('#prScanResult');
+    if (result) {
+      result.classList.remove('pr-hidden');
+      result.innerHTML = '<div class="pr-alert pr-alert-info">' +
+        svg('<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>', 2) +
+        '<span><strong>Payment app से वापस आए हैं.</strong> ' +
+        (pending.data.amount != null ? 'Amount: <strong>₹' + formatAmount(pending.data.amount) + '</strong>. ' : '') +
+        'Payment success केवल UPI/payment-provider verification से confirm होगी.</span></div>';
+    }
   }
 
   function showPaymentStatusModal(pending) {
