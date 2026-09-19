@@ -639,8 +639,30 @@ body {
 .pr-withdraw-form{display:none}.pr-withdraw-form.is-active{display:block}
 @media(max-width:560px){.pr-topbar{flex-wrap:wrap}.pr-topbar-left{flex:1 1 100%}.pr-topbar>.pr-wallet-btn{margin-left:auto}}
 
+
+/* TIME SLOT BOOKING */
+.pr-booking-link{width:100%;display:flex;align-items:center;gap:12px;margin:2px 0 18px;padding:14px 16px;border:1px solid var(--pr-border);border-radius:14px;background:var(--pr-surface);color:var(--pr-text);text-align:left;cursor:pointer;box-shadow:var(--pr-shadow-sm);transition:.18s}
+.pr-booking-link:hover{border-color:var(--pr-border-strong);background:var(--pr-surface-2);transform:translateY(-1px)}
+.pr-booking-link:active{transform:scale(.99)}
+.pr-booking-link-icon{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:11px;background:var(--pr-primary-soft);color:var(--pr-primary)}
+.pr-booking-link-icon svg{width:20px;height:20px}.pr-booking-link strong{display:block;font-size:13.5px}.pr-booking-link small{display:block;color:var(--pr-text-muted);font-size:11.5px;margin-top:3px}.pr-link-arrow{width:18px;height:18px;margin-left:auto;color:var(--pr-text-muted)}
+.pr-booking-setup-card{padding:24px}.pr-book-section-title{font-size:16px;font-weight:750;margin:22px 0 15px;padding-top:20px;border-top:1px solid var(--pr-border)}
+.pr-textarea{min-height:100px;resize:vertical;padding-top:13px}.pr-inline-ai{float:right;border:0;background:transparent;color:var(--pr-text);font:600 12px inherit;cursor:pointer;padding:0}.pr-inline-ai:before{content:'✦';margin-right:6px}.pr-upload-row{display:flex;align-items:center;gap:12px}.pr-logo-preview{width:50px;height:50px;border:1px solid var(--pr-border);border-radius:11px;background:var(--pr-surface-2);display:grid;place-items:center;font-size:10px;color:var(--pr-text-muted);overflow:hidden}.pr-logo-preview img{width:100%;height:100%;object-fit:cover}.pr-choice-row{display:flex;gap:18px;margin-bottom:10px}.pr-radio,.pr-check{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--pr-text-2);cursor:pointer}.pr-radio input,.pr-check input{accent-color:var(--pr-primary)}.pr-two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pr-mb-10{margin-bottom:10px}.pr-mt-10{margin-top:10px}.pr-days{display:flex;gap:6px;flex-wrap:wrap}.pr-day-btn{width:38px;height:36px;border-radius:10px;border:1px solid var(--pr-border);background:var(--pr-surface-2);color:var(--pr-text-2);font:700 12px inherit;cursor:pointer}.pr-day-btn.is-active{background:var(--pr-primary);border-color:var(--pr-primary);color:#fff}.pr-book-options{display:flex;flex-direction:column;gap:11px;margin:4px 0 18px}.pr-book-live-label{font-size:11px;font-weight:800;color:var(--pr-text-muted);letter-spacing:.08em;margin:8px 0 8px}.pr-book-preview{border:1px solid #f0e9a7;border-radius:18px;overflow:hidden;background:#fffde5;box-shadow:var(--pr-shadow);margin-bottom:18px}.pr-book-preview-head{display:flex;gap:12px;padding:18px 18px 16px;background:#fff8b9;border-bottom:1px solid #f0e9a7}.pr-book-preview-logo{width:48px;height:48px;flex:0 0 48px;border-radius:10px;background:#fff;display:grid;place-items:center;color:#8a8a72;font-size:10px;overflow:hidden}.pr-book-preview-logo img{width:100%;height:100%;object-fit:cover}.pr-book-preview-kind{font-size:11px;color:#667085;background:#fff;border-radius:999px;padding:4px 8px;display:inline-block}.pr-book-preview-name{font-size:12px;color:#667085;margin-top:6px}.pr-book-preview-title{font-size:19px;font-weight:800;color:#111827;margin-top:2px}.pr-book-preview-body{padding:17px}.pr-book-meta{display:flex;flex-wrap:wrap;gap:15px;font-size:12px;color:#667085;margin-bottom:16px}.pr-book-meta span{display:flex;align-items:center;gap:6px}.pr-book-meta svg{width:16px;height:16px}.pr-book-description{font-size:12px;line-height:1.5;color:#475467;margin:-5px 0 14px}.pr-book-date-title{font-size:13px;font-weight:700;margin-bottom:9px;color:#111827}.pr-book-date-row{display:flex;gap:8px;overflow:auto;padding-bottom:6px}.pr-book-date-btn{white-space:nowrap;border:1px solid #e5e7eb;background:#fff;border-radius:9px;padding:8px 11px;font:600 11px inherit;color:#344054;cursor:pointer}.pr-book-date-btn.is-active{background:#192a63;color:#fff;border-color:#192a63}.pr-book-times-title{font-size:13px;font-weight:700;margin:11px 0 9px}.pr-book-times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.pr-book-time{padding:9px 6px;border:1px solid #d0d5dd;border-radius:9px;background:#fff;font:600 11px inherit;color:#344054;cursor:pointer}.pr-book-time.is-active{background:#192a63;border-color:#192a63;color:#fff}.pr-book-time.is-full{opacity:.4;text-decoration:line-through;cursor:not-allowed}.pr-book-confirm{width:100%;margin-top:15px}.pr-book-empty{padding:12px;border:1px dashed #d0d5dd;border-radius:10px;color:#98a2b3;font-size:11px;text-align:center;background:#fff}.pr-book-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}.pr-book-stat{padding:11px;border:1px solid var(--pr-border);border-radius:11px;background:var(--pr-surface-2)}.pr-book-stat small{display:block;color:var(--pr-text-muted);font-size:10px}.pr-book-stat strong{display:block;font-size:18px;margin-top:3px}.pr-booking-list{display:flex;flex-direction:column;gap:9px}.pr-booking-item{border:1px solid var(--pr-border);border-radius:12px;padding:12px;background:var(--pr-surface-2)}.pr-booking-item-top{display:flex;justify-content:space-between;gap:10px}.pr-booking-item strong{font-size:13px}.pr-booking-item small{display:block;color:var(--pr-text-muted);font-size:10.5px;margin-top:4px}.pr-booking-status{font-size:10px;font-weight:800;padding:4px 7px;border-radius:999px;background:var(--pr-success-soft);color:var(--pr-success);height:max-content}.pr-booking-actions{display:flex;gap:7px;margin-top:10px}.pr-booking-actions button{flex:1;padding:7px;border:1px solid var(--pr-border);border-radius:8px;background:var(--pr-surface);color:var(--pr-text-2);font:600 10.5px inherit;cursor:pointer}
+@media(max-width:560px){.pr-booking-setup-card{padding:18px}.pr-two-col{grid-template-columns:1fr}.pr-book-times{grid-template-columns:repeat(2,1fr)}.pr-book-stats{grid-template-columns:1fr 1fr 1fr}.pr-choice-row{gap:12px}}
 </style>
 
+<style id="pr-age-calculator-style">
+/* AGE DIFFERENCE / AGE CALCULATOR */
+.pr-age-link{width:100%;display:flex;align-items:center;gap:12px;margin:2px 0 18px;padding:14px 16px;border:1px solid var(--pr-border);border-radius:14px;background:var(--pr-surface);color:var(--pr-text);text-align:left;cursor:pointer;box-shadow:var(--pr-shadow-sm);transition:.18s}
+.pr-age-link:hover{border-color:var(--pr-border-strong);background:var(--pr-surface-2);transform:translateY(-1px)}
+.pr-age-link:active{transform:scale(.99)}
+.pr-age-link-icon{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:11px;background:var(--pr-primary-soft);color:var(--pr-primary)}
+.pr-age-link-icon svg{width:20px;height:20px}.pr-age-link strong{display:block;font-size:13.5px}.pr-age-link small{display:block;color:var(--pr-text-muted);font-size:11.5px;margin-top:3px}.pr-age-link .pr-link-arrow{width:18px;height:18px;margin-left:auto;color:var(--pr-text-muted)}
+.pr-age-card{padding:24px}.pr-age-switch{display:inline-flex;padding:4px;background:var(--pr-surface-3);border-radius:12px;gap:3px;margin-bottom:22px}.pr-age-switch button{border:0;background:transparent;color:var(--pr-text-2);padding:9px 14px;border-radius:9px;font:600 13px inherit;cursor:pointer}.pr-age-switch button.is-active{background:var(--pr-surface);color:var(--pr-text);box-shadow:var(--pr-shadow-sm)}
+.pr-age-calc-switch{display:inline-flex;padding:4px;background:var(--pr-surface-3);border-radius:12px;gap:3px;margin:4px 0 20px}.pr-age-calc-switch button{border:0;background:transparent;color:var(--pr-text-2);padding:9px 13px;border-radius:9px;font:600 13px inherit;cursor:pointer}.pr-age-calc-switch button.is-active{background:var(--pr-surface);color:var(--pr-text);box-shadow:var(--pr-shadow-sm)}
+.pr-age-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pr-age-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:4px}.pr-age-actions .pr-btn{min-width:100px}.pr-age-result{margin-top:18px}.pr-age-result-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.pr-age-result-head h3{margin:0;font-size:16px}.pr-age-copy{width:38px;height:38px;border:1px solid var(--pr-border);border-radius:10px;background:var(--pr-surface);color:var(--pr-text-2);display:grid;place-items:center;cursor:pointer}.pr-age-copy svg{width:18px;height:18px}.pr-age-result-row{display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--pr-border);font-size:13.5px}.pr-age-result-row:last-child{border-bottom:0}.pr-age-result-row span{color:var(--pr-text-muted)}.pr-age-result-row strong{text-align:right;font-size:15px} .pr-age-personal-note{padding:12px 14px;border:1px solid var(--pr-info-border);background:var(--pr-info-soft);color:var(--pr-info-text);border-radius:11px;font-size:12px;line-height:1.5;margin-top:14px}.pr-age-date-trigger{display:flex;align-items:center;justify-content:flex-start;text-align:left;cursor:pointer;min-height:48px;color:var(--pr-text)}.pr-age-date-trigger:empty:before{content:"Select date";color:var(--pr-text-muted)}.pr-age-date-trigger.is-placeholder{color:var(--pr-text-muted)}.pr-age-calendar-backdrop{position:fixed;inset:0;z-index:10020;background:rgba(8,12,22,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:16px}.pr-age-calendar{width:min(390px,94vw);background:var(--pr-surface);border:1px solid var(--pr-border);border-radius:20px;box-shadow:var(--pr-shadow-lg);overflow:hidden;animation:prPop .2s ease}.pr-age-cal-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 12px;border-bottom:1px solid var(--pr-border)}.pr-age-cal-head strong{font-size:16px}.pr-age-cal-nav{display:flex;gap:6px}.pr-age-cal-nav button{width:34px;height:34px;border:1px solid var(--pr-border);background:var(--pr-surface-2);color:var(--pr-text);border-radius:9px;display:grid;place-items:center;cursor:pointer}.pr-age-cal-nav svg{width:16px;height:16px}.pr-age-cal-body{padding:14px 16px 18px}.pr-age-cal-week,.pr-age-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.pr-age-cal-week{margin-bottom:7px}.pr-age-cal-week span{text-align:center;font-size:10.5px;font-weight:700;color:var(--pr-text-muted);padding:5px 0}.pr-age-cal-day{height:40px;border:0;background:transparent;color:var(--pr-text);border-radius:10px;font:600 13px inherit;cursor:pointer}.pr-age-cal-day:hover{background:var(--pr-surface-3)}.pr-age-cal-day.is-other{color:var(--pr-text-muted);opacity:.55}.pr-age-cal-day.is-today{box-shadow:inset 0 0 0 1px var(--pr-primary)}.pr-age-cal-day.is-selected{background:var(--pr-primary);color:#fff}.pr-age-cal-foot{display:flex;gap:8px;margin-top:14px}.pr-age-cal-foot button{flex:1}.pr-age-cal-title{display:flex;align-items:center;gap:7px}.pr-age-cal-title span{color:var(--pr-text-muted);font-size:11px}.pr-age-calendar select{font:600 14px inherit;border:1px solid var(--pr-border);background:var(--pr-surface-2);color:var(--pr-text);border-radius:8px;padding:6px 8px;outline:none}.pr-age-calendar select:focus{border-color:var(--pr-primary)}@media(max-width:420px){.pr-age-calendar{width:96vw}.pr-age-cal-day{height:38px;font-size:12px}.pr-age-cal-body{padding:12px 10px 16px}} .pr-age-hidden{display:none!important}
+@media(max-width:560px){.pr-age-card{padding:18px}.pr-age-two{grid-template-columns:1fr;gap:0}.pr-age-actions .pr-btn{flex:1}.pr-age-switch,.pr-age-calc-switch{width:100%}.pr-age-switch button,.pr-age-calc-switch button{flex:1}}
+</style>
 </head>
 
 <body>
@@ -868,6 +890,18 @@ body {
         </div>
       </div>
 
+      <button class="pr-booking-link" type="button" id="prOpenBookingLink">
+        <span class="pr-booking-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h3M8 17h5"/></svg></span>
+        <span><strong>Time Slot Booking</strong><small>Create and publish a booking page</small></span>
+        <svg class="pr-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+
+      <button class="pr-age-link" type="button" id="prOpenAgeLink">
+        <span class="pr-age-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.7-4 3-6 7-6s6.3 2 7 6"/><path d="M18.5 4.5h3M20 3v3"/></svg></span>
+        <span><strong>Age Difference Calculator</strong><small>Calculate your age or compare two ages</small></span>
+        <svg class="pr-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+
     </section>
 
     <!-- SCAN PANEL -->
@@ -932,6 +966,116 @@ body {
           <p class="pr-error" id="prManualError" role="alert"></p>
         </div>
         <button class="pr-btn pr-btn-secondary pr-btn-block" type="button" id="prManualBtn">Load Payment Details</button>
+      </div>
+    </section>
+
+    <!-- BOOKING PANEL -->
+    <section class="pr-panel" id="panel-booking" role="tabpanel">
+      <div class="pr-card pr-booking-setup-card">
+        <div class="pr-generator-intro">
+          <div class="pr-generator-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h3M8 17h5"/>
+            </svg>
+          </div>
+          <div><h2>Time Slot Booking</h2><p>Create a booking page for your service, class, consultation or appointment.</p></div>
+        </div>
+
+        <form id="prBookingForm" novalidate autocomplete="off">
+          <div class="pr-field"><label for="prBookName">Name <span class="pr-req">*</span></label><input class="pr-input" id="prBookName" placeholder="Business or service provider name" maxlength="80"></div>
+          <div class="pr-field"><label for="prBookTitle">Page title <span class="pr-req">*</span></label><input class="pr-input" id="prBookTitle" value="Reserve Your Spot" maxlength="100"></div>
+          <div class="pr-field"><label>Logo</label><div class="pr-upload-row"><div class="pr-logo-preview" id="prBookLogoPreview">Logo</div><button class="pr-btn pr-btn-secondary" type="button" id="prBookLogoBtn"><span>Upload</span></button><input type="file" id="prBookLogoFile" accept="image/*" class="pr-hidden"></div></div>
+          <div class="pr-field"><label for="prBookDescription">Description <button class="pr-inline-ai" type="button" id="prBookAi">Generate with AI</button></label><textarea class="pr-input pr-textarea" id="prBookDescription" maxlength="500" placeholder="Describe your service, session, or class..."></textarea></div>
+          <div class="pr-field"><label>Location</label><div class="pr-choice-row"><label class="pr-radio"><input type="radio" name="prBookLocation" value="online"><span>Online</span></label><label class="pr-radio"><input type="radio" name="prBookLocation" value="inperson" checked><span>In person</span></label></div><div id="prBookAddressFields"><input class="pr-input pr-mb-10" id="prBookAddress" placeholder="Street address" maxlength="160"><div class="pr-two-col"><input class="pr-input" id="prBookCity" placeholder="City" maxlength="80"><input class="pr-input" id="prBookState" placeholder="State / province" maxlength="80"></div><div class="pr-two-col pr-mt-10"><input class="pr-input" id="prBookPostal" placeholder="Postal code" maxlength="20"><input class="pr-input" id="prBookCountry" placeholder="Country" maxlength="80"></div></div><input class="pr-input pr-hidden" id="prBookMeeting" placeholder="Meeting link" maxlength="300"></div>
+
+          <div class="pr-book-section-title">Availability</div>
+          <div class="pr-field"><label for="prBookDuration">Duration (min)</label><input class="pr-input" id="prBookDuration" type="number" min="5" max="480" step="5" value="30"></div>
+          <div class="pr-two-col"><div class="pr-field"><label for="prBookStart">Start time</label><select class="pr-input" id="prBookStart"></select></div><div class="pr-field"><label for="prBookEnd">End time</label><select class="pr-input" id="prBookEnd"></select></div></div>
+          <div class="pr-field"><label>Days of week</label><div class="pr-days" id="prBookDays"></div></div>
+          <div class="pr-two-col"><div class="pr-field"><label for="prBookCapacity">Bookings per slot</label><input class="pr-input" id="prBookCapacity" type="number" min="1" max="100" value="1"></div><div class="pr-field"><label for="prBookPrice">Booking fee (₹)</label><input class="pr-input" id="prBookPrice" type="number" min="0" max="100000" step="0.01" value="0"></div></div>
+          <div class="pr-two-col"><div class="pr-field"><label for="prBookNotice">Minimum notice (min)</label><input class="pr-input" id="prBookNotice" type="number" min="0" max="10080" value="0"></div><div class="pr-field"><label for="prBookAdvance">Book up to (days)</label><input class="pr-input" id="prBookAdvance" type="number" min="1" max="365" value="30"></div></div>
+          <div class="pr-book-options"><label class="pr-check"><input type="checkbox" id="prBookPaymentRequired"><span>Require payment before confirmation</span></label><label class="pr-check"><input type="checkbox" id="prBookReschedule" checked><span>Allow rescheduling</span></label></div>
+          <button class="pr-btn pr-btn-primary pr-btn-block pr-generate-main" type="submit" id="prPublishBooking"><span>Publish booking page</span></button>
+        </form>
+      </div>
+
+      <div class="pr-book-live-label">LIVE PREVIEW</div>
+      <div class="pr-book-preview" id="prBookingPreview"></div>
+      <div class="pr-card pr-book-manage-card"><div class="pr-card-head"><h2>Manage bookings</h2><p>View and manage bookings created on this device.</p></div><div class="pr-book-stats" id="prBookingStats"></div><div id="prBookingList" class="pr-booking-list"></div></div>
+    </section>
+
+    <!-- AGE CALCULATOR PANEL -->
+    <section class="pr-panel" id="panel-age" role="tabpanel">
+      <div class="pr-card pr-age-card">
+        <div class="pr-card-head">
+          <h2>Age Difference Calculator</h2>
+          <p>Calculate your current age or compare the exact age gap between two people.</p>
+        </div>
+
+        <div class="pr-age-switch" role="tablist" aria-label="Age calculator mode">
+          <button type="button" class="is-active" data-age-mode="personal">My Age</button>
+          <button type="button" data-age-mode="compare">Compare Ages</button>
+        </div>
+
+        <div class="pr-field">
+          <label>Calculate from</label>
+          <div class="pr-age-calc-switch">
+            <button type="button" class="is-active" data-age-input="date">Date of birth</button>
+            <button type="button" data-age-input="year">Year of birth</button>
+          </div>
+        </div>
+
+        <div id="prAgePersonalFields">
+          <div class="pr-field" id="prAgePersonalDateField">
+            <label for="prAgePersonalDate">Date of birth</label>
+            <button class="pr-input pr-age-date-trigger" id="prAgePersonalDate" type="button" data-value="" aria-haspopup="dialog" aria-label="Select date of birth">Select date</button>
+          </div>
+          <div class="pr-field pr-age-hidden" id="prAgePersonalYearField">
+            <label for="prAgePersonalYear">Year of birth</label>
+            <input class="pr-input" id="prAgePersonalYear" type="number" min="1" max="9999" inputmode="numeric" placeholder="1996">
+          </div>
+        </div>
+
+        <div id="prAgeCompareFields" class="pr-age-hidden">
+          <div class="pr-age-two">
+            <div class="pr-field" id="prAgeP1DateField">
+              <label for="prAgeP1Date">Birth date of Person 1</label>
+              <button class="pr-input pr-age-date-trigger" id="prAgeP1Date" type="button" data-value="" aria-haspopup="dialog" aria-label="Select birth date of Person 1">Select date</button>
+            </div>
+            <div class="pr-field" id="prAgeP2DateField">
+              <label for="prAgeP2Date">Birth date of Person 2</label>
+              <button class="pr-input pr-age-date-trigger" id="prAgeP2Date" type="button" data-value="" aria-haspopup="dialog" aria-label="Select birth date of Person 2">Select date</button>
+            </div>
+          </div>
+          <div class="pr-age-two pr-age-hidden" id="prAgeCompareYearFields">
+            <div class="pr-field">
+              <label for="prAgeP1Year">Year of birth — Person 1</label>
+              <input class="pr-input" id="prAgeP1Year" type="number" min="1" max="9999" inputmode="numeric" placeholder="1996">
+            </div>
+            <div class="pr-field">
+              <label for="prAgeP2Year">Year of birth — Person 2</label>
+              <input class="pr-input" id="prAgeP2Year" type="number" min="1" max="9999" inputmode="numeric" placeholder="2001">
+            </div>
+          </div>
+        </div>
+
+        <div class="pr-age-actions">
+          <button class="pr-btn pr-btn-secondary" type="button" id="prAgeSwap">Swap</button>
+          <button class="pr-btn pr-btn-secondary" type="button" id="prAgeClear">Clear</button>
+          <button class="pr-btn pr-btn-secondary" type="button" id="prAgeShare">Share</button>
+        </div>
+      </div>
+
+      <div class="pr-card pr-age-result">
+        <div class="pr-age-result-head">
+          <h3>Result</h3>
+          <button class="pr-age-copy" type="button" id="prAgeCopy" aria-label="Copy result">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+          </button>
+        </div>
+        <div id="prAgeResultBody">
+          <div class="pr-age-result-row"><span>Age</span><strong>Enter your date of birth</strong></div>
+        </div>
       </div>
     </section>
 
@@ -1581,8 +1725,22 @@ body {
   function removeFromHistory(id) { persistHistory(loadHistory().filter(function (x) { return x.id !== id; })); renderHistory(); }
   function clearHistory() { persistHistory([]); renderHistory(); }
 
-  /* ---- TABS ---- */
-  function switchTab(name) {
+  /* ---- TABS + MOBILE BACK NAVIGATION ---- */
+  var PR_VALID_ROUTES = ['receive', 'scan', 'history', 'booking', 'age'];
+  var prRouteReady = false;
+
+  function normalizeRoute(name) {
+    return PR_VALID_ROUTES.indexOf(name) !== -1 ? name : 'receive';
+  }
+
+  function routeFromLocation() {
+    var hash = (location.hash || '').replace(/^#/, '').trim();
+    return normalizeRoute(hash);
+  }
+
+  function switchTab(name, opts) {
+    name = normalizeRoute(name);
+    opts = opts || {};
     $$('.pr-tab').forEach(function (t) {
       var active = t.getAttribute('data-tab') === name;
       t.classList.toggle('is-active', active);
@@ -1590,7 +1748,32 @@ body {
     });
     $$('.pr-panel').forEach(function (p) { p.classList.toggle('is-active', p.id === 'panel-' + name); });
     if (name !== 'scan') stopCamera();
+    if (!opts.noHistory && prRouteReady) {
+      var target = '#' + name;
+      if (location.hash !== target) history.pushState({ prRoute: name }, '', target);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function initRouteNavigation() {
+    var initial = routeFromLocation();
+    prRouteReady = false;
+    switchTab(initial, { noHistory: true });
+    prRouteReady = true;
+
+    window.addEventListener('popstate', function () {
+      /* Android/mobile browser Back: always return to the previous in-app page. */
+      var wallet = $('#prWalletModalRoot');
+      if (wallet && !wallet.classList.contains('pr-hidden')) {
+        closeWallet();
+        return;
+      }
+      if (state.modalEl) {
+        closeModal();
+        return;
+      }
+      switchTab(routeFromLocation(), { noHistory: true });
+    });
   }
 
   /* ---- ERRORS ---- */
@@ -2293,6 +2476,218 @@ body {
     });
   }
 
+
+  /* ---- AGE DIFFERENCE / AGE CALCULATOR ---- */
+  var ageMode = 'personal', ageInputMode = 'date', ageResultText = '';
+  function localDateFromInput(v){
+    if(!v) return null;
+    var p=String(v).split('-').map(Number);
+    if(p.length!==3 || !p[0] || !p[1] || !p[2]) return null;
+    var d=new Date(p[0],p[1]-1,p[2]);
+    return d.getFullYear()===p[0] && d.getMonth()===p[1]-1 && d.getDate()===p[2] ? d : null;
+  }
+  function diffAge(from,to){
+    if(!from || !to) return null;
+    if(from>to){var tmp=from;from=to;to=tmp;}
+    var y=to.getFullYear()-from.getFullYear(), m=to.getMonth()-from.getMonth(), d=to.getDate()-from.getDate();
+    if(d<0){m--;var prev=new Date(to.getFullYear(),to.getMonth(),0);d+=prev.getDate();}
+    if(m<0){y--;m+=12;}
+    var ms=to.getTime()-from.getTime(), days=Math.round(ms/86400000);
+    return {years:y,months:m,days:d,totalDays:days};
+  }
+  function ageToday(d){return diffAge(d,new Date());}
+  function ageInputDate(id,yearId){
+    if(ageInputMode==='date'){
+      var el=$('#'+id);
+      return el ? localDateFromInput(el.dataset.value || '') : null;
+    }
+    var y=parseInt($('#'+yearId).value,10); if(!y || y<1 || y>9999) return null;
+    return new Date(y,0,1);
+  }
+  function ageFormat(a){return a.years+' years, '+a.months+' months, '+a.days+' days';}
+  function ageEsc(v){return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function renderAgeFields(){
+    var personal=$('#prAgePersonalFields'),compare=$('#prAgeCompareFields');
+    if(personal) personal.classList.toggle('pr-age-hidden',ageMode!=='personal');
+    if(compare) compare.classList.toggle('pr-age-hidden',ageMode!=='compare');
+    $('#prAgePersonalDateField').classList.toggle('pr-age-hidden',ageInputMode!=='date');
+    $('#prAgePersonalYearField').classList.toggle('pr-age-hidden',ageInputMode!=='year');
+    $('#prAgeP1DateField').classList.toggle('pr-age-hidden',ageInputMode!=='date');
+    $('#prAgeP2DateField').classList.toggle('pr-age-hidden',ageInputMode!=='date');
+    $('#prAgeCompareYearFields').classList.toggle('pr-age-hidden',ageInputMode!=='year');
+    $$('.pr-age-switch button').forEach(function(b){b.classList.toggle('is-active',b.dataset.ageMode===ageMode);});
+    $$('.pr-age-calc-switch button').forEach(function(b){b.classList.toggle('is-active',b.dataset.ageInput===ageInputMode);});
+  }
+  function renderAgeResult(){
+    var box=$('#prAgeResultBody'); if(!box)return;
+    var html='', text='';
+    if(ageMode==='personal'){
+      var d=ageInputDate('prAgePersonalDate','prAgePersonalYear');
+      if(!d){html='<div class="pr-age-result-row"><span>Age</span><strong>Enter your date of birth</strong></div>'; ageResultText='';}
+      else{
+        var a=ageToday(d); html='<div class="pr-age-result-row"><span>Age</span><strong>'+ageFormat(a)+'</strong></div><div class="pr-age-result-row"><span>Total days</span><strong>'+a.totalDays.toLocaleString()+' days</strong></div><div class="pr-age-result-row"><span>Born</span><strong>'+d.toLocaleDateString(undefined,{day:'2-digit',month:'long',year:'numeric'})+'</strong></div><div class="pr-age-personal-note">Age is calculated up to today using your selected date of birth.</div>'; text='Age: '+ageFormat(a)+'\nTotal days: '+a.totalDays.toLocaleString()+' days\nBorn: '+d.toLocaleDateString(); ageResultText=text;
+      }
+    } else {
+      var d1=ageInputDate('prAgeP1Date','prAgeP1Year'), d2=ageInputDate('prAgeP2Date','prAgeP2Year');
+      if(!d1||!d2){html='<div class="pr-age-result-row"><span>Age gap</span><strong>Enter both birth dates</strong></div>';ageResultText='';}
+      else{
+        var a=diffAge(d1,d2), older=d1<d2?'Person 1':'Person 2';
+        if(d1.getTime()===d2.getTime()) older='Same age';
+        html='<div class="pr-age-result-row"><span>Age gap</span><strong>'+ageFormat(a)+'</strong></div><div class="pr-age-result-row"><span>Total days</span><strong>'+a.totalDays.toLocaleString()+' days</strong></div><div class="pr-age-result-row"><span>Older person</span><strong>'+older+'</strong></div>'; text='Age gap: '+ageFormat(a)+'\nTotal days: '+a.totalDays.toLocaleString()+' days\nOlder person: '+older; ageResultText=text;
+      }
+    }
+    box.innerHTML=html;
+  }
+  var ageCalendarTarget=null, ageCalendarMonth=new Date(new Date().getFullYear(),new Date().getMonth(),1);
+  function agePad(n){return String(n).padStart(2,'0');}
+  function ageDateKey(d){return d.getFullYear()+'-'+agePad(d.getMonth()+1)+'-'+agePad(d.getDate());}
+  function ageCalendarOpen(target){
+    ageCalendarTarget=target;
+    var value=target.dataset.value||'';
+    var selected=localDateFromInput(value);
+    var today=new Date();
+    ageCalendarMonth=selected?new Date(selected.getFullYear(),selected.getMonth(),1):new Date(today.getFullYear(),today.getMonth(),1);
+    ageCalendarRender();
+  }
+  function ageCalendarClose(){var x=$('#prAgeCalendarBackdrop');if(x)x.remove();ageCalendarTarget=null;}
+  function ageCalendarRender(){
+    var old=$('#prAgeCalendarBackdrop');if(old)old.remove();
+    var y=ageCalendarMonth.getFullYear(),m=ageCalendarMonth.getMonth(),monthName=ageCalendarMonth.toLocaleDateString(undefined,{month:'long'});
+    var first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),prevDays=new Date(y,m,0).getDate(),start=(first.getDay()+6)%7;
+    var selected=ageCalendarTarget?ageCalendarTarget.dataset.value:'';
+    var todayKey=ageDateKey(new Date());
+    var cells='';
+    for(var i=0;i<42;i++){
+      var day=i-start+1, yy=y, mm=m, other=false;
+      if(day<1){day=prevDays+day;mm=m-1;other=true;}else if(day>days){day=day-days;mm=m+1;other=true;}
+      var d=new Date(yy,mm,day), key=ageDateKey(d);
+      cells+='<button type="button" class="pr-age-cal-day '+(other?'is-other ':'')+(key===todayKey?'is-today ':'')+(key===selected?'is-selected':'')+'" data-date="'+key+'">'+day+'</button>';
+    }
+    var back=document.createElement('div');back.id='prAgeCalendarBackdrop';back.className='pr-age-calendar-backdrop';back.innerHTML='<div class="pr-age-calendar" role="dialog" aria-modal="true" aria-label="Select date"><div class="pr-age-cal-head"><div class="pr-age-cal-title"><select id="prAgeCalMonth" aria-label="Month">'+Array.from({length:12},function(_,i){return '<option value="'+i+'" '+(i===m?'selected':'')+'>'+new Date(2000,i,1).toLocaleDateString(undefined,{month:'long'})+'</option>';}).join('')+'</select><select id="prAgeCalYear" aria-label="Year">'+Array.from({length:121},function(_,i){var yr=new Date().getFullYear()-100+i;return '<option value="'+yr+'" '+(yr===y?'selected':'')+'>'+yr+'</option>';}).join('')+'</select></div><div class="pr-age-cal-nav"><button type="button" id="prAgeCalPrev" aria-label="Previous month">‹</button><button type="button" id="prAgeCalNext" aria-label="Next month">›</button></div></div><div class="pr-age-cal-body"><div class="pr-age-cal-week"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div><div class="pr-age-cal-grid">'+cells+'</div><div class="pr-age-cal-foot"><button type="button" class="pr-btn pr-btn-secondary" id="prAgeCalToday">Today</button><button type="button" class="pr-btn pr-btn-ghost" id="prAgeCalCancel">Cancel</button></div></div></div>';
+    document.body.appendChild(back);
+    back.addEventListener('click',function(e){if(e.target===back)ageCalendarClose();});
+    $('#prAgeCalPrev').addEventListener('click',function(){ageCalendarMonth.setMonth(ageCalendarMonth.getMonth()-1);ageCalendarRender();});
+    $('#prAgeCalNext').addEventListener('click',function(){ageCalendarMonth.setMonth(ageCalendarMonth.getMonth()+1);ageCalendarRender();});
+    $('#prAgeCalMonth').addEventListener('change',function(){ageCalendarMonth.setMonth(parseInt(this.value,10));ageCalendarRender();});
+    $('#prAgeCalYear').addEventListener('change',function(){ageCalendarMonth.setFullYear(parseInt(this.value,10));ageCalendarRender();});
+    $('#prAgeCalToday').addEventListener('click',function(){var t=new Date();ageCalendarMonth=new Date(t.getFullYear(),t.getMonth(),1);ageCalendarRender();});
+    $('#prAgeCalCancel').addEventListener('click',ageCalendarClose);
+    $$('.pr-age-cal-day',back).forEach(function(btn){btn.addEventListener('click',function(){if(!ageCalendarTarget)return;var d=localDateFromInput(btn.dataset.date);ageCalendarTarget.dataset.value=btn.dataset.date;ageCalendarTarget.textContent=d.toLocaleDateString(undefined,{day:'2-digit',month:'2-digit',year:'numeric'});ageCalendarTarget.classList.remove('is-placeholder');var ev=new Event('input',{bubbles:true});ageCalendarTarget.dispatchEvent(ev);ageCalendarClose();});});
+  }
+  function setAgeDateButton(btn,value){if(!btn)return;btn.dataset.value=value||'';if(value){var d=localDateFromInput(value);btn.textContent=d?d.toLocaleDateString(undefined,{day:'2-digit',month:'2-digit',year:'numeric'}):'Select date';btn.classList.remove('is-placeholder');}else{btn.textContent='Select date';btn.classList.add('is-placeholder');}}
+  function initAgeDatePickers(){
+    $$('.pr-age-date-trigger').forEach(function(btn){
+      if(!btn.dataset.value){btn.classList.add('is-placeholder');btn.textContent='Select date';}
+      btn.addEventListener('click',function(){ageCalendarOpen(btn);});
+    });
+  }
+  function initAgeCalculator(){
+    initAgeDatePickers();
+    $$('.pr-age-switch button').forEach(function(b){b.addEventListener('click',function(){ageMode=b.dataset.ageMode;renderAgeFields();renderAgeResult();});});
+    $$('.pr-age-calc-switch button').forEach(function(b){b.addEventListener('click',function(){ageInputMode=b.dataset.ageInput;renderAgeFields();renderAgeResult();});});
+    ['prAgePersonalDate','prAgePersonalYear','prAgeP1Date','prAgeP2Date','prAgeP1Year','prAgeP2Year'].forEach(function(id){var e=$('#'+id);if(e)e.addEventListener('input',renderAgeResult);});
+    var swap=$('#prAgeSwap'); if(swap)swap.addEventListener('click',function(){
+      if(ageMode!=='compare'){toast('Swap is available in Compare Ages mode','info');return;}
+      if(ageInputMode==='date'){var a=$('#prAgeP1Date').dataset.value||'',b=$('#prAgeP2Date').dataset.value||'';setAgeDateButton($('#prAgeP1Date'),b);setAgeDateButton($('#prAgeP2Date'),a);}
+      else {var a=$('#prAgeP1Year').value,b=$('#prAgeP2Year').value;$('#prAgeP1Year').value=b;$('#prAgeP2Year').value=a;}
+      renderAgeResult();
+    });
+    var clear=$('#prAgeClear');if(clear)clear.addEventListener('click',function(){['prAgePersonalDate','prAgeP1Date','prAgeP2Date'].forEach(function(id){setAgeDateButton($('#'+id),'');});['prAgePersonalYear','prAgeP1Year','prAgeP2Year'].forEach(function(id){var e=$('#'+id);if(e)e.value='';});renderAgeResult();toast('Age calculator cleared','success');});
+    var copy=$('#prAgeCopy');if(copy)copy.addEventListener('click',function(){if(!ageResultText){toast('Nothing to copy yet','info');return;}if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(ageResultText).then(function(){toast('Result copied','success');}).catch(function(){toast('Copy failed','error');});else toast('Copy is not supported on this browser','error');});
+    var share=$('#prAgeShare');if(share)share.addEventListener('click',function(){if(!ageResultText){toast('Calculate an age first','info');return;}var title=ageMode==='personal'?'My Age':'Age Difference';if(navigator.share)navigator.share({title:title,text:ageResultText}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(ageResultText).then(function(){toast('Result copied for sharing','success');});});
+    renderAgeFields();renderAgeResult();
+  }
+  function openAgePage(){switchTab('age');}
+
+  /* ---- TIME SLOT BOOKING ---- */
+  var BOOKING_CONFIG_KEY = 'pr_booking_config_v1';
+  var BOOKING_LIST_KEY = 'pr_booking_list_v1';
+  var BOOKING_DAYS = ['S','M','T','W','T','F','S'];
+  var BOOKING_DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var bookingSelectedDate = null, bookingSelectedTime = null;
+  function bookingConfig(){
+    try { return JSON.parse(localStorage.getItem(BOOKING_CONFIG_KEY)||'null') || {}; } catch(e){ return {}; }
+  }
+  function bookingList(){ try{return JSON.parse(localStorage.getItem(BOOKING_LIST_KEY)||'[]')||[]}catch(e){return[]} }
+  function saveBookingList(a){ localStorage.setItem(BOOKING_LIST_KEY,JSON.stringify(a)); }
+  function fillBookingTimes(){
+    var start=$('#prBookStart'),end=$('#prBookEnd'); if(!start||!end)return;
+    var opts=''; for(var m=0;m<24*60;m+=15){var h=Math.floor(m/60),mm=m%60, hh=h%12||12, ap=h<12?'AM':'PM', label=String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0')+' '+ap;opts+='<option value="'+String(h).padStart(2,'0')+':'+String(mm).padStart(2,'0')+'">'+label+'</option>';}
+    start.innerHTML=opts; end.innerHTML=opts; start.value='09:00'; end.value='17:00';
+  }
+  function initBookingDays(){var box=$('#prBookDays');if(!box)return;box.innerHTML='';BOOKING_DAYS.forEach(function(d,i){var b=document.createElement('button');b.type='button';b.className='pr-day-btn'+(i>0&&i<6?' is-active':'');b.dataset.day=i;b.textContent=d;b.addEventListener('click',function(){b.classList.toggle('is-active');renderBookingPreview();});box.appendChild(b);});}
+  function getBookingForm(){
+    var days=$$('#prBookDays .pr-day-btn').filter(function(b){return b.classList.contains('is-active')}).map(function(b){return Number(b.dataset.day)});
+    var loc=$('input[name="prBookLocation"]:checked');
+    return {name:sanitizeText($('#prBookName').value,80),title:sanitizeText($('#prBookTitle').value,100)||'Reserve Your Spot',description:sanitizeText($('#prBookDescription').value,500),logo:($('#prBookLogoPreview img')||{}).src||'',location:loc?loc.value:'inperson',address:sanitizeText($('#prBookAddress').value,160),city:sanitizeText($('#prBookCity').value,80),state:sanitizeText($('#prBookState').value,80),postal:sanitizeText($('#prBookPostal').value,20),country:sanitizeText($('#prBookCountry').value,80),meeting:sanitizeText($('#prBookMeeting').value,300),duration:Math.max(5,Number($('#prBookDuration').value)||30),start:$('#prBookStart').value,end:$('#prBookEnd').value,days:days,capacity:Math.max(1,Number($('#prBookCapacity').value)||1),price:Math.max(0,Number($('#prBookPrice').value)||0),notice:Math.max(0,Number($('#prBookNotice').value)||0),advance:Math.max(1,Number($('#prBookAdvance').value)||30),paymentRequired:$('#prBookPaymentRequired').checked,reschedule:$('#prBookReschedule').checked};
+  }
+  function timeToMin(t){var p=t.split(':');return Number(p[0])*60+Number(p[1])}
+  function formatTime(t){var p=t.split(':'),h=Number(p[0]),m=p[1],ap=h<12?'AM':'PM';h=h%12||12;return h+':'+m+' '+ap}
+  function generateSlots(c){var out=[],s=timeToMin(c.start),e=timeToMin(c.end);for(var m=s;m+c.duration<=e;m+=c.duration)out.push(String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0'));return out}
+  function dateKey(d){return d.toISOString().slice(0,10)}
+  function getPreviewDates(c){var out=[],d=new Date();d.setHours(0,0,0,0);for(var i=0;i<c.advance && out.length<7;i++){var x=new Date(d);x.setDate(d.getDate()+i);if(c.days.indexOf(x.getDay())!==-1)out.push(x)}return out}
+  function bookingsFor(date,time){return bookingList().filter(function(b){return b.date===date&&b.time===time&&b.status==='confirmed'}).length}
+  function renderBookingPreview(){
+    var root=$('#prBookingPreview');if(!root)return;var c=getBookingForm();
+    if(!bookingSelectedDate){var ds=getPreviewDates(c);bookingSelectedDate=ds.length?dateKey(ds[0]):null;bookingSelectedTime=null;}
+    var dates=getPreviewDates(c); if(dates.length && !dates.some(function(d){return dateKey(d)===bookingSelectedDate})) bookingSelectedDate=dateKey(dates[0]);
+    var loc=c.location==='online'?'Online':(c.city?c.city:'In person');
+    var datesHtml=dates.map(function(d){var k=dateKey(d),active=k===bookingSelectedDate;return '<button class="pr-book-date-btn '+(active?'is-active':'')+'" type="button" data-date="'+k+'">'+d.toLocaleDateString(undefined,{weekday:'short',day:'2-digit',month:'short'})+'</button>';}).join('');
+    var slots=generateSlots(c);var timesHtml='';slots.forEach(function(t){var used=bookingsFor(bookingSelectedDate,t),full=used>=c.capacity,active=bookingSelectedTime===t&&!full;timesHtml+='<button class="pr-book-time '+(active?'is-active ':'')+(full?'is-full':'')+'" type="button" data-time="'+t+'" '+(full?'disabled':'')+'>'+formatTime(t)+'</button>';});
+    if(!slots.length)timesHtml='<div class="pr-book-empty">No slots available for the selected hours.</div>';
+    var logo=c.logo?'<img src="'+c.logo+'" alt="">':'Logo';
+    root.innerHTML='<div class="pr-book-preview-head"><div class="pr-book-preview-logo">'+logo+'</div><div><span class="pr-book-preview-kind">'+(c.capacity>1?'Group Session':'Appointment')+'</span><div class="pr-book-preview-name">'+(c.name||'Your Name').replace(/</g,'&lt;')+'</div><div class="pr-book-preview-title">'+c.title.replace(/</g,'&lt;')+'</div></div></div><div class="pr-book-preview-body"><div class="pr-book-meta"><span>'+svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>')+' '+c.duration+' min</span><span>'+svg(c.location==='online'?'<path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/>':'<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>')+' '+loc+'</span></div>'+(c.description?'<div class="pr-book-description">'+c.description.replace(/</g,'&lt;')+'</div>':'')+'<div class="pr-book-date-title">Pick a date</div><div class="pr-book-date-row">'+datesHtml+'</div><div class="pr-book-times-title">Available times</div><div class="pr-book-times">'+timesHtml+'</div><button class="pr-btn pr-btn-primary pr-book-confirm" type="button" id="prBookConfirm" '+(!bookingSelectedDate||!bookingSelectedTime?'disabled':'')+'>Confirm Booking'+(c.price>0?' · ₹'+c.price.toFixed(2):'')+'</button></div>';
+    $$('.pr-book-date-btn',root).forEach(function(b){b.addEventListener('click',function(){bookingSelectedDate=b.dataset.date;bookingSelectedTime=null;renderBookingPreview();});});
+    $$('.pr-book-time',root).forEach(function(b){b.addEventListener('click',function(){if(b.disabled)return;bookingSelectedTime=b.dataset.time;renderBookingPreview();});});
+    var cb=$('#prBookConfirm');if(cb)cb.addEventListener('click',confirmBooking);
+  }
+  function confirmBooking(){var c=getBookingForm();if(!bookingSelectedDate||!bookingSelectedTime)return;openModal({title:'Confirm Booking',bodyHTML:'<div class=\"pr-field\"><label for=\"prCustomerName\">Customer name <span class=\"pr-req\">*</span></label><input class=\"pr-input\" id=\"prCustomerName\" maxlength=\"80\" placeholder=\"Enter customer name\"></div><div class=\"pr-field\" style=\"margin-bottom:0\"><label for=\"prCustomerPhone\">Mobile number</label><input class=\"pr-input\" id=\"prCustomerPhone\" inputmode=\"tel\" maxlength=\"20\" placeholder=\"Optional\"></div>',actions:[{label:'Cancel',variant:'pr-btn-secondary'},{label:'Confirm Booking',variant:'pr-btn-primary',onClick:function(){var name=sanitizeText($('#prCustomerName').value,80),phone=sanitizeText($('#prCustomerPhone').value,20);if(!name){toast('Customer name is required','error');return;}var list=bookingList(),id='BK-'+Date.now().toString(36).toUpperCase();list.unshift({id:id,date:bookingSelectedDate,time:bookingSelectedTime,name:name,phone:phone,service:c.title,price:c.price,status:'confirmed',createdAt:new Date().toISOString()});saveBookingList(list);toast('Booking confirmed: '+id,'success');renderBookingManager();renderBookingPreview();}}]});setTimeout(function(){var n=$('#prCustomerName');if(n)n.focus();},40);}
+  function renderBookingManager(){var list=bookingList(),today=dateKey(new Date()),up=list.filter(function(b){return b.status==='confirmed'&&b.date>=today}).length,done=list.filter(function(b){return b.status==='completed'}).length,cancel=list.filter(function(b){return b.status==='cancelled'}).length;var st=$('#prBookingStats');if(st)st.innerHTML='<div class="pr-book-stat"><small>Upcoming</small><strong>'+up+'</strong></div><div class="pr-book-stat"><small>Completed</small><strong>'+done+'</strong></div><div class="pr-book-stat"><small>Cancelled</small><strong>'+cancel+'</strong></div>';var box=$('#prBookingList');if(!box)return;if(!list.length){box.innerHTML='<div class="pr-empty" style="padding:25px"><h3>No bookings yet</h3><p>Customer bookings will appear here.</p></div>';return;}box.innerHTML=list.slice(0,30).map(function(b){return '<div class="pr-booking-item"><div class="pr-booking-item-top"><div><strong>'+b.name.replace(/</g,'&lt;')+'</strong><small>'+b.service.replace(/</g,'&lt;')+' · '+b.date+' · '+formatTime(b.time)+'</small><small>Booking ID: '+b.id+(b.price?' · ₹'+Number(b.price).toFixed(2):'')+'</small></div><span class="pr-booking-status">'+b.status+'</span></div><div class="pr-booking-actions">'+(b.status==='confirmed'?'<button type="button" data-book-action="complete" data-id="'+b.id+'">Complete</button><button type="button" data-book-action="cancel" data-id="'+b.id+'">Cancel</button>':'')+'</div></div>';}).join('');$$('[data-book-action]',box).forEach(function(btn){btn.addEventListener('click',function(){var id=btn.dataset.id,act=btn.dataset.bookAction,a=bookingList(),x=a.find(function(v){return v.id===id});if(!x)return;x.status=act==='complete'?'completed':'cancelled';saveBookingList(a);renderBookingManager();renderBookingPreview();toast('Booking '+x.status,'success');});});}
+  function loadBookingConfig(){var c=bookingConfig();if(!c)return;var map={prBookName:'name',prBookTitle:'title',prBookDescription:'description',prBookAddress:'address',prBookCity:'city',prBookState:'state',prBookPostal:'postal',prBookCountry:'country',prBookMeeting:'meeting',prBookDuration:'duration',prBookStart:'start',prBookEnd:'end',prBookCapacity:'capacity',prBookPrice:'price',prBookNotice:'notice',prBookAdvance:'advance'};Object.keys(map).forEach(function(id){var e=$('#'+id);if(e&&c[map[id]]!=null)e.value=c[map[id]];});if(c.location){var r=$('input[name="prBookLocation"][value="'+c.location+'"]');if(r)r.checked=true;}['prBookPaymentRequired','prBookReschedule'].forEach(function(id){var e=$('#'+id),k=id==='prBookPaymentRequired'?'paymentRequired':'reschedule';if(e&&c[k]!=null)e.checked=c[k];} );if(c.days){$$('#prBookDays .pr-day-btn').forEach(function(b){b.classList.toggle('is-active',c.days.indexOf(Number(b.dataset.day))!==-1);});}if(c.logo){$('#prBookLogoPreview').innerHTML='<img src="'+c.logo+'" alt="">';}}
+  function saveBookingConfig(){var c=getBookingForm();if(!c.name){toast('Enter business or service provider name','error');$('#prBookName').focus();return false;}if(timeToMin(c.end)<=timeToMin(c.start)){toast('End time must be after start time','error');return false;}if(!c.days.length){toast('Select at least one day','error');return false;}localStorage.setItem(BOOKING_CONFIG_KEY,JSON.stringify(c));toast('Booking page published','success');return true;}
+  function initBooking(){fillBookingTimes();initBookingDays();loadBookingConfig();var form=$('#prBookingForm');if(form)form.addEventListener('submit',function(e){e.preventDefault();if(saveBookingConfig()){renderBookingPreview();renderBookingManager();}});var logoBtn=$('#prBookLogoBtn'),logoFile=$('#prBookLogoFile');if(logoBtn&&logoFile){logoBtn.addEventListener('click',function(){logoFile.click()});logoFile.addEventListener('change',function(){var f=logoFile.files&&logoFile.files[0];if(!f)return;var r=new FileReader();r.onload=function(){ $('#prBookLogoPreview').innerHTML='<img src="'+r.result+'" alt="">';renderBookingPreview();};r.readAsDataURL(f);});}var ai=$('#prBookAi');if(ai)ai.addEventListener('click',function(){var n=$('#prBookName').value.trim()||'our service';$('#prBookDescription').value='Book a convenient time for '+n+'. Select an available date and time slot, then confirm your appointment in a few simple steps.';renderBookingPreview();});$$('#prBookingForm input,#prBookingForm textarea,#prBookingForm select').forEach(function(e){e.addEventListener('input',function(){bookingSelectedDate=null;bookingSelectedTime=null;renderBookingPreview();});e.addEventListener('change',function(){bookingSelectedDate=null;bookingSelectedTime=null;renderBookingPreview();});});renderBookingPreview();renderBookingManager();}
+  function openBookingPage(){
+    switchTab('booking');
+  }
+  function initBookingNavigation(){
+    var link=$('#prOpenBookingLink');
+    if(link) link.addEventListener('click',function(e){
+      e.preventDefault();
+      openBookingPage();
+    });
+  }
+
+  function initAgeNavigation(){
+    var link=$('#prOpenAgeLink');
+    if(link) link.addEventListener('click',function(e){e.preventDefault();openAgePage();});
+  }
+
+  /* ---- BUTTON HAPTIC FEEDBACK ----
+     Gives a short vibration when the user presses an interactive button.
+     Browsers that do not support vibration simply ignore it.
+  */
+  function prButtonVibrate() {
+    try {
+      if (navigator.vibrate) navigator.vibrate(25);
+    } catch (e) {}
+  }
+
+  function initButtonVibration() {
+    document.addEventListener('pointerdown', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest(
+        'button, [role="button"], .pr-btn, .pr-icon-btn, .pr-wallet-btn, ' +
+        '.pr-tab, .pr-hi-btn, .pr-status-btn, .pr-method-btn, .pr-day-btn, ' +
+        '.pr-booking-link, .pr-book-date-btn, .pr-book-time, .pr-book-confirm, ' +
+        '.pr-age-link, .pr-age-switch button, .pr-age-calc-switch button, ' +
+        '.pr-age-cal-nav button, .pr-age-cal-day, .pr-age-cal-foot button, ' +
+        '.pr-age-copy'
+      ) : null;
+
+      if (!el || el.disabled || el.getAttribute('aria-disabled') === 'true') return;
+      prButtonVibrate();
+    }, { passive: true });
+  }
+
   function bindEvents() {
     $$('.pr-tab').forEach(function (t) {
       t.addEventListener('click', function (e) {
@@ -2410,10 +2805,17 @@ body {
   function init() {
     initTheme();
 
+    initButtonVibration();
+
     /* Bind navigation and core buttons first. This keeps Scan & Pay and History
        clickable even if Firebase or another optional service is still loading. */
     bindEvents();
     renderHistory();
+    initBooking();
+    initRouteNavigation();
+    initBookingNavigation();
+    initAgeCalculator();
+    initAgeNavigation();
 
     initFirebaseAuth();
     renderWallet();
@@ -2430,6 +2832,8 @@ body {
     openReceive: function () { switchTab('receive'); },
     openScan: function () { switchTab('scan'); },
     openHistory: function () { switchTab('history'); },
+    openBooking: function () { openBookingPage(); },
+    openAge: function () { openAgePage(); },
     getHistory: loadHistory,
     buildUpiUri: buildUpiUri,
     parseUpiUri: parseUpiUri,
